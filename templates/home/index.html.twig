@@ -1,38 +1,23 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau Excel</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+<body>
 
-{% block title %}Projet Labo Excel
-{% endblock %}
+    <h1>Tableau Excel</h1>
 
-{% block body %}
-	<style>
-		.example-wrapper {
-			margin: 1em auto;
-			max-width: 800px;
-			width: 95%;
-			font: 18px / 1.5 sans-serif;
-		}
-		.example-wrapper code {
-			background: #F5F5F5;
-			padding: 2px 6px;
-		}
-	</style>
+    <input type="file" id="input" />
+    <button onclick="downloadExcel()">Télécharger Excel</button>
 
-	<div class="example-wrapper">
-		<h1>Hello
-			{{ controller_name }}! ✅</h1>
+    <table id="table"></table>
 
-		This friendly message is coming from:
-		<ul>
-			<li>Your controller at
-				<code>
-					<a href="{{ '/home/exostflash/ProjetLabo_Exel/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a>
-				</code>
-			</li>
-			<li>Your template at
-				<code>
-					<a href="{{ '/home/exostflash/ProjetLabo_Exel/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a>
-				</code>
-			</li>
-		</ul>
-	</div>
-{% endblock %}
+    <script src="js/script.js">
+	</script>
+</body>
+</html>
